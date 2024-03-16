@@ -28,13 +28,13 @@ struct GalleryView: View {
                 .bold()
                 .foregroundColor(.brown)
             ScrollView{
-                LazyVGrid(columns: [GridItem(), GridItem()]){
+                LazyVGrid(columns: [GridItem(spacing: 10), GridItem(spacing: 10)]){
                     ForEach(galleryImages, id: \.self){pic in
                         Image(pic)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .cornerRadius(20)
-                            .padding(5)
+                            .padding(10)
                             .onTapGesture {
                                 selectedIamge = pic
                                 sheetVisible = true
