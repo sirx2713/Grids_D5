@@ -34,6 +34,7 @@ struct GalleryView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .cornerRadius(20)
+                            .padding(5)
                             .onTapGesture {
                                 selectedIamge = pic
                                 sheetVisible = true
